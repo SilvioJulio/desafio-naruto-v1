@@ -7,10 +7,12 @@ public class Personagem {
     private int chakra;
 
     public Personagem(String nome, int idade, String aldeia, String[] jutsus, int chakra) {
-        this.nome = nome;
+        this.nome = ValidadorPersonagem.ValidadorNomePersonagem(nome,"nome");
+        this.idade  = ValidadorPersonagem.ValidarIdadePerspnagem(idade, "idade");
         this.aldeia = aldeia;
         this.jutsus = jutsus;
         this.chakra = chakra;
+
 
     }
 
@@ -20,6 +22,14 @@ public class Personagem {
 
     public String getNome() {
         return this.nome;
+    }
+
+    public int setIdade(int idade) {
+        return this.idade;
+    }
+
+    public int getIdade() {
+        return this.idade;
     }
 
     public String setAldeia(String aldeia) {
