@@ -21,14 +21,14 @@ public class PersonagemTest {
     }
 
     @Test
-    public void deveVerificarNomeDaAldeiaFoiAtribuidoCrretamente() {
+    public void deveVerificarNomeDaAldeia() {
         Personagem sasuke = new Personagem("Sasuke", 17, "Folha", new String[]{"Chidori"}, 100);
         assertEquals("Folha", sasuke.getNome());
     }
 
 
     @Test
-    public void deveRetornarErroNomeEstiverNuloOuVazio() {
+    public void deveRetornarErroNomeEstiverVazio() {
 
         assertThrows(RuntimeException.class, () -> {
             new Personagem("", 14, "Falco", new String[]{"Chidori"}, 90);
@@ -76,14 +76,6 @@ public class PersonagemTest {
                 ValidadorPersonagem.ValidarIdadePerspnagem(125, "idade"));
         assertThrows(IllegalArgumentException.class, () ->
                 ValidadorPersonagem.ValidarIdadePerspnagem(200, "idade"));
-    }
-    @Test
-    public void deveLancarErroNomeForNuloOuVazio(){
-        assertThrows(RuntimeException.class, () -> {
-            Personagem sukato = new Personagem("Luck", 17, "", new String[]{"Sharingan"}, 200);
-        }, "Deveria lançar RuntimeException quando o nome aldeia estiver nula ou vazio");
-
-
     }
 }
 

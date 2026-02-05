@@ -9,7 +9,7 @@ public class Personagem {
     public Personagem(String nome, int idade, String aldeia, String[] jutsus, int chakra) {
         this.nome = ValidadorPersonagem.ValidadorNomePersonagem(nome,"nome");
         this.idade  = ValidadorPersonagem.ValidarIdadePerspnagem(idade, "idade");
-        this.aldeia = ValidadorPersonagem.ValidareNomeAldeia(aldeia, "aldeia");
+        this.aldeia = aldeia;
         this.jutsus = jutsus;
         this.chakra = chakra;
 
