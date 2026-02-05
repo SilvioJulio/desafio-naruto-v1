@@ -17,4 +17,10 @@ public class ValidadorPersonagem {
 
         return idade;
     }
+    public static String ValidareNomeAldeia(String nome, String campo) {
+        if (nome == null || nome.isEmpty()) {
+            throw new RuntimeException("O cmapo:" + campo + " não pode está nulo ou vazio");
+        }
+        return nome;
+    }
 }
