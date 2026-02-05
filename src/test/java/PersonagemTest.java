@@ -77,6 +77,16 @@ public class PersonagemTest {
         assertThrows(IllegalArgumentException.class, () ->
                 ValidadorPersonagem.ValidarIdadePerspnagem(200, "idade"));
     }
+
+    @Test
+    public void deveLancarErroNomeForNuloOuVazio() {
+        assertThrows(RuntimeException.class, () -> {
+            Personagem sukato = new Personagem("Luck", 17, "", new String[]{"Sharingan"}, 200);
+        }, "Deveria lançar RuntimeException quando o nome aldeia estiver nula ou vazio");
+
+
+    }
+
 }
 
 
